@@ -1,5 +1,4 @@
 # Cinime-Movie-Ticket-Reservation-System
-# Cinema-Online-Ticketing-System
 This is one of the projects I did individually during my Diploma study. 
 
 This project was developed by using php, html, css and JavaScript. 
