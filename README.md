@@ -1,5 +1,6 @@
 # Cinime-Movie-Ticket-Reservation-System
 This is one of the projects I did individually during my Diploma study. 
+**The project files is in master branc**
 
 This project was developed by using php, html, css and JavaScript. 
 
