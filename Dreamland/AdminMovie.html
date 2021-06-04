@@ -1,0 +1,83 @@
+<!Doctype html>
+<html>
+<head>
+  <title>Admin Movie</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="Layout.css" type="text/css" />
+
+</head>
+
+<body>
+<div id="sidenavbar" class="sidenav">
+  <div class="sidebtnlogo">
+  <button class="btnmenu" onclick="closeNav()"><i class="fa fa-bars"Menu></i></button>
+  <a href="#Home"><img src="Image/Logo4.png" class="sidelogo" alt="Logo"/></a>
+  </div>
+  <div class="sidemenu">
+    <a href="#Home">Home</a><br />
+    <a href="Movie">Movie</a><br />
+    <a href="Showtimes">Showtimes</a><br />
+    <a href="Promotion">Promotion</a><br />
+  </div>
+</div>
+
+<div class="header">
+  <ul>
+    <button class="btnmenu" onclick="openNav()"><i class="fa fa-bars"Menu></i></button>
+    <a href="#Home"><img src="Image/Logo4.png" class="logo" alt="Logo"/></a>
+    <li><a href = 'LoginForm.php'>Login</a></li>
+    <li><a href="#Sign Up">Sign Up</a></li>
+    <li><a href="#"></a></li>
+  </ul>
+</div>
+
+<script>
+
+function openNav() {
+  document.getElementById("sidenavbar").style.width = "250px";
+}
+
+function closeNav(){
+  document.getElementById("sidenavbar").style.width = "0";
+}
+
+</script>
+
+<div class="main">
+  <div id="AdminMovie">
+    <legend>
+      Movie Information
+    </legend>
+    <div class="option">
+    <button class="add" type="button"><i class="material-icons" style="font-size:18px; padding-right:5px;">add</i>Add Movie</button>
+    <div class="adminmoviesearch">
+      <form action="search.php" method="get">
+        <input class="admoviesearch" type="text" placeholder="Search Movie..." name="search" />
+        <button class="btniconsearch" type="submit"><i class = "fa fa-search"></i></button>
+      </form>
+    </div>
+    </div>
+    <center>
+      <table>
+        <tr>
+          <th>Image</th>
+          <th>Title</th>
+          <th>Running Time</th>
+          <th>Status</th>
+        </tr>
+
+        <tr>
+        <td>aaa</td>
+        <td>bbb</td>
+        <td>123</td>
+        <td>
+          <button>Edit</button><br />
+          <button>Edit</button><br />
+          <button>Edit</button>
+        </td>
+      </tr>
+
+      </table>
+    </center>
+  </div>
+</div>

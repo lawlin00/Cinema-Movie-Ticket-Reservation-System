@@ -1,0 +1,313 @@
+<!Doctype html>
+<html>
+
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+  	margin: 0;
+  	padding: 0;
+  	border: 0;
+  	font-size: 100%;
+  	font: inherit;
+  	vertical-align: baseline;
+  }
+
+body {
+  background: url(Image/Background.jpg);
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  height: 700px;
+  background-attachment: fixed;
+
+}
+
+.header{
+  height: 80px;
+  width: 100%;
+  position: relative;
+
+}
+
+.logo{
+  display: block;
+  height: 45px;
+  width: 130px;
+  float: left;
+  padding: 25px 0px 0px 0px;
+
+
+}
+
+.sidelogo{
+  display: block;
+  height: 45px;
+  width: 130px;
+  float: left;
+  padding: 18px 0px 5px 0px;
+
+
+}
+
+.btnmenu {
+  background-color: rgba(36, 36, 36, 1);
+  border: none;
+  color: white;
+  padding: 12px 5px 12px 5px;
+  font-size: 40px;
+  cursor: pointer;
+  float: left;
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: 10px;
+  display: block;
+}
+
+ul{
+  list-style-type: none;
+  overflow: hidden;
+  background-color: rgba(36, 36, 36, 1);
+  margin-left: -10px;
+  margin-top: -8px;
+  padding-left: 0px;
+}
+
+li{
+  float: right;
+  color: rgba(248, 102, 11, 1);
+  font-size: bold;
+  font-family: Comic Sans MS;
+  padding-right: 15px;
+  text-align: center;
+  padding-top: 15px;
+  border: 1px;
+  border-color: rgba(76, 142 208, 1);
+}
+
+li a{
+  color: White;
+  padding: 16px;
+  display:block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+li a:hover{
+  background-color: rgba(76,76,76,1);
+}
+
+.sidenav{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top:0;
+  left:0;
+  background-color: rgba(25, 25, 25, 1);
+  overflow-x: hidden;
+  padding-top: -20px;
+  transition: 0.3s;
+  color: white;
+}
+
+.sidenav a{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgba(142, 142, 142, 1);
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidebtnlogo{
+  height: 80px;
+  position: relative;
+  background-color: rgba(36, 36, 36, 1);
+  margin-top: -10px;
+  padding-bottom: 5px;
+}
+
+.main {
+  transition: margin-left .5s;
+  background-color:rgba(38, 38, 38, 0.5);
+  width: 50%;
+  margin-top: 50px;
+  margin-left: 150px;
+  width: 80%;
+  position: absolute;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+}
+
+.sidemenu{
+    padding: 18px 0px 8px 0px;
+}
+
+.login{
+  margin-left: 160px;
+  margin-right: 150px;
+  background: #8E0E00;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom right, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom right, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 90%;
+  width:70%;
+  padding-bottom: 40px;
+
+}
+
+input[type=text],input[type=password]{
+  margin: 5px 100px 5px 100px;
+  width:70%;
+  padding: 10px 10px 10px 5px;
+  background-color: #ddd;
+  outline: none;
+  display: inline-block;
+}
+
+input[type=text]:focus,input[type=password]:focus{
+  border-color: rgba(20, 147, 193, 0.9);
+}
+
+input[type=submit]{
+  float: right;
+  font-size: 16px;
+  padding: 16px 20px;
+  margin-top: 30px;
+  background-color: rgba(25, 214, 25, 1);
+  border-radius: 10px;
+  border-width: thin;
+  border-color: rgba(21, 105, 21, 1);
+  width: 200px;
+  margin-right: 275px;
+}
+
+input[type=submit]:hover{
+  background-color: rgba(98, 243, 98, 1);
+}
+
+legend{
+  background-color: rgba(4,5,4,1);
+  color: White;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 20px;
+
+}
+
+.instruction{
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  color: white;
+}
+
+.register{
+  margin: 10px 100px 5px 100px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  position: absolute;
+}
+
+.register:hover{
+  text-decoration: underline;
+  color: rgba(63, 191, 191, 1);
+  font-size: 18px;
+}
+
+.imglogin{
+  width:25%;
+  height: 25%;
+  margin-left: 290px;
+  margin-top: 20px;
+}
+
+  </style>
+
+</head>
+
+<body>
+  <div id="sidenavbar" class="sidenav">
+    <div class="sidebtnlogo">
+    <button class="btnmenu" onclick="closeNav()"><i class="fa fa-bars"Menu></i></button>
+    <a href="#Home"><img src="Image/Logo4.png" class="sidelogo" alt="Logo"/></a>
+    </div>
+    <div class="sidemenu">
+      <a href="#Home">Home</a><br />
+      <a href="Movie">Movie</a><br />
+      <a href="Showtimes">Showtimes</a><br />
+      <a href="Promotion">Promotion</a><br />
+    </div>
+  </div>
+
+  <div class="header">
+    <ul>
+      <button class="btnmenu" onclick="openNav()"><i class="fa fa-bars"Menu></i></button>
+      <a href="#Home"><img src="Image/Logo4.png" class="logo" alt="Logo"/></a>
+      <li><a href="#Login">Log In</a></li>
+      <li><a href="#Sign Up">Sign Up</a></li>
+      <li><a href="#"></a></li>
+    </ul>
+  </div>
+
+<div class="main">
+  <div class="login">
+    <form id="Form" action="Login.php" method="POST">
+      <fieldset>
+        <legend>Login to Your Account</legend>
+        <img src="Image/Login.png" class="imglogin" alt="Login"/>
+        <p class="instruction">Please enter username and password.</p>
+        <input type="text" name="username" placeholder="Username" required/><br />
+        <input type="password" name="password" placeholder="Password" required/><br />
+        <a href="SignUp.html" class="register">Don't have account? Register Here.</a>
+        <br />
+        <input type="submit" value="Login" />
+      </fieldset>
+    </form>
+  </div>
+
+</div>
+
+
+<script>
+
+  function openNav() {
+    document.getElementById("sidenavbar").style.width = "250px";
+  }
+
+  function closeNav(){
+    document.getElementById("sidenavbar").style.width = "0";
+  }
+
+</script>
+
+</body>
+
+</html>

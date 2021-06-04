@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestSeat</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="SeatLayout.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+
+  <script>
+      addEventListener("load", function () {
+          setTimeout(hideURLbar, 0);
+      }, false);
+
+      function hideURLbar() {
+          window.scrollTo(0, 1);
+      }
+  </script>
+
+</head>
+
+<body onload="onLoaderFunc()">
+    <div id="sidenavbar" class="sidenav">
+      <div class="sidebtnlogo">
+      <button class="btnmenu" onclick="closeNav()"><i class="fa fa-bars"Menu></i></button>
+      <a href="#Home"><img src="Image/Logo4.png" class="sidelogo" alt="Logo"/></a>
+      </div>
+      <div class="sidemenu">
+        <a href="#Home">Home</a><br />
+        <a href="Movie">Movie</a><br />
+        <a href="Showtimes">Showtimes</a><br />
+      </div>
+    </div>
+
+    <div class="header">
+      <ul class="menu">
+        <button class="btnmenu" onclick="openNav()"><i class="fa fa-bars"Menu></i></button>
+        <a href="#Home"><img src="Image/Logo4.png" class="logo" alt="Logo"/></a>
+        <li class="menu2"><a href="#Sign Up">Sign Up</a></li>
+        <li class="menu2"><a href="#"></a></li>
+      </ul>
+    </div>
+
+
+
+  <script>
+
+    function openNav() {
+      document.getElementById("sidenavbar").style.width = "250px";
+    }
+
+    function closeNav(){
+      document.getElementById("sidenavbar").style.width = "0";
+    }
+
+  </script>
+  <h1>Movie Seat Selection</h1>
+  <div class="container">
+    <div class="w3ls-reg">
+      <!--input fielss-->
+      <div class="inputForm">
+        <h2>Fill the required details below and select your seats</h2>
+        <div class="mr_agilemain">
+          <div class="agileits-left">
+          <label>Name: <span>*</span></label>
+          <input type="text" id="Username" required />
+        </div>
+        <div class="agileits-right">
+          <label>Number of Seats: <span>*</span>
+          <input type="number" id="Numseats" required min="1" />
+          </label>
+        </div>
+      </div>
+      <button onclick="takeData()">Start Selecting</button>
+    </div>
+
+    <ul class="seat_w3ls">
+      <li class="smallBox greenBox">Selected Seat</li>
+      <li class="smallBox redBox">Reserved Seat</li>
+      <li class="smallBox emptyBox">Empty Seat</li>
+    </ul>
+
+    <div class="seatStructure">
+      <table id="seatsBlock">
+        <p id="notification"></p>
+          <tr>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+
+            <td>3</td>
+            <td class="seatGap"></td>
+            <td>4</td>
+
+            <td>5</td>
+            <td>6</td>
+
+            <td>7</td>
+            <td>8</td>
+
+            <td>9</td>
+            <td class="seatGap"></td>
+            <td>10</td>
+
+            <td>11</td>
+            <td>12</td>
+          </tr>
+          <tr>
+              <td>A</td>
+              <td><input type="checkbox" class="seats empty" value="A1"></td>
+              <td><input type="checkbox" class="seats empty" value="A2"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A3"></td>
+              <td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A4"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A5"></td>
+              <td><input type="checkbox" class="seats empty" value="A6"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A7"></td>
+              <td><input type="checkbox" class="seats empty" value="A8"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A9"></td>
+              <td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A10"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A11"></td>
+              <td><input type="checkbox" class="seats empty" value="A12"></td>
+          </tr>
+
+
+
+          <tr>
+              <td>B</td>
+              <td><input type="checkbox" class="seats empty" value="A1" ></td>
+              <td><input type="checkbox" class="seats empty" value="A2"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A3"></td>
+<td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A4"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A5"></td>
+              <td><input type="checkbox" class="seats empty" value="A6"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A7"></td>
+              <td><input type="checkbox" class="seats empty" value="A8"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A9"></td>
+              <td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A10"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A11"></td>
+              <td><input type="checkbox" class="seats empty" value="A12"></td>
+          </tr>
+
+          <tr>
+              <td>C</td>
+              <td><input type="checkbox" class="seats empty" value="A1"></td>
+              <td><input type="checkbox" class="seats empty" value="A2"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A3"></td>
+              <td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A4"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A5"></td>
+              <td><input type="checkbox" class="seats empty" value="A6"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A7"></td>
+              <td><input type="checkbox" class="seats empty" value="A8"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A9"></td>
+              <td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A10"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A11"></td>
+              <td><input type="checkbox" class="seats empty" value="A12"></td>
+          </tr>
+
+
+
+          <tr>
+              <td>D</td>
+              <td><input type="checkbox" class="seats empty" value="A1" ></td>
+              <td><input type="checkbox" class="seats empty" value="A2"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A3"></td>
+<td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A4"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A5"></td>
+              <td><input type="checkbox" class="seats empty" value="A6"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A7"></td>
+              <td><input type="checkbox" class="seats empty" value="A8"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A9"></td>
+              <td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A10"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A11"></td>
+              <td><input type="checkbox" class="seats empty" value="A12"></td>
+          </tr>
+
+          <tr>
+              <td>E</td>
+              <td><input type="checkbox" class="seats empty" value="A1" ></td>
+              <td><input type="checkbox" class="seats empty" value="A2"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A3"></td>
+              <td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A4"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A5"></td>
+              <td><input type="checkbox" class="seats empty" value="A6"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A7"></td>
+              <td><input type="checkbox" class="seats empty" value="A8"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A9"></td>
+              <td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A10"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A11"></td>
+              <td><input type="checkbox" class="seats empty" value="A12"></td>
+          </tr>
+
+
+
+          <tr>
+              <td>F</td>
+              <td><input type="checkbox" class="seats empty" value="A1"></td>
+              <td><input type="checkbox" class="seats empty" value="A2"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A3"></td>
+<td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A4"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A5"></td>
+              <td><input type="checkbox" class="seats empty" value="A6"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A7"></td>
+              <td><input type="checkbox" class="seats empty" value="A8"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A9"></td>
+              <td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A10"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A11"></td>
+              <td><input type="checkbox" class="seats empty" value="A12"></td>
+          </tr>
+
+          <tr>
+              <td>G</td>
+              <td><input type="checkbox" class="seats empty" value="A1"></td>
+              <td><input type="checkbox" class="seats empty" value="A2"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A3"></td>
+              <td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A4"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A5"></td>
+              <td><input type="checkbox" class="seats empty" value="A6"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A7"></td>
+              <td><input type="checkbox" class="seats empty" value="A8"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A9"></td>
+              <td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A10"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A11"></td>
+              <td><input type="checkbox" class="seats empty" value="A12"></td>
+          </tr>
+
+
+
+          <tr>
+              <td>H</td>
+              <td><input type="checkbox" class="seats empty" value="A1" ></td>
+              <td><input type="checkbox" class="seats empty" value="A2"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A3"></td>
+<td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A4"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A5"></td>
+              <td><input type="checkbox" class="seats empty" value="A6"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A7"></td>
+              <td><input type="checkbox" class="seats empty" value="A8"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A9"></td>
+              <td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A10"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A11"></td>
+              <td><input type="checkbox" class="seats empty" value="A12"></td>
+          </tr>
+
+          <tr>
+              <td>I</td>
+              <td><input type="checkbox" class="seats empty" value="A1" ></td>
+              <td><input type="checkbox" class="seats empty" value="A2"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A3"></td>
+              <td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A4"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A5"></td>
+              <td><input type="checkbox" class="seats empty" value="A6"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A7"></td>
+              <td><input type="checkbox" class="seats empty" value="A8"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A9"></td>
+              <td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A10"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A11"></td>
+              <td><input type="checkbox" class="seats empty" value="A12"></td>
+          </tr>
+
+
+
+          <tr>
+              <td>J</td>
+              <td><input type="checkbox" class="seats empty" value="A1" ></td>
+              <td><input type="checkbox" class="seats empty" value="A2"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A3"></td>
+<td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A4"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A5"></td>
+              <td><input type="checkbox" class="seats empty" value="A6"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A7"></td>
+              <td><input type="checkbox" class="seats empty" value="A8"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A9"></td>
+              <td class="seatGap"></td>
+              <td><input type="checkbox" class="seats empty" value="A10"></td>
+
+              <td><input type="checkbox" class="seats empty" value="A11"></td>
+              <td><input type="checkbox" class="seats empty" value="A12"></td>
+          </tr>
+
+
+      </table>
+
+      <div class="screen">
+          <h2 class="wthree">Screen this way</h2>
+      </div>
+      <button onclick="updateTextArea()">Confirm Selection</button>
+    </div>
+
+    <div class="displayerBoxes">
+        <table class="Displaytable w3ls-table" width="100%">
+            <tr>
+                <th>Name</th>
+                <th>Number of Seats</th>
+                <th>Seats</th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea id="nameDisplay"></textarea>
+                </td>
+                <td>
+                    <textarea id="NumberDisplay"></textarea>
+                </td>
+                <td>
+                    <textarea id="seatsDisplay"></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+
+  //if not enter name and num of seat, disable the section
+      function onLoaderFunc(){
+        $(".seatStructure *").prop("disabled",true);
+        $(".displayerBoxes *").prop("disabled",true);
+      }
+
+      function takeData() {
+        if (($("#Username").val().length==0) || ($("#Numseats").val().length == 0)) {
+          alert("Please Enter your Name and Number of Seats");
+        } else { //else enable it
+          $(".inputForm *").prop("disabled",true);
+          $(".seatStructure *").prop("disabled",false);
+
+        }
+      }
+
+      function updateTextArea(){
+        if ($("input:checked.empty").length == ($("#Numseats").val())){
+          $(".seatStructure *").prop("disabled",true);
+
+          var allNameVals = [];
+          var allNumberVals = [];
+          var allSeatsVals = [];
+
+          //Storing in Array
+          allNameVals.push($("#Username").val());
+          allNumberVals.push($("#Numseats").val());
+          $('#seatsBlock :checked.empty').each(function () {
+              allSeatsVals.push($(this).val());
+          });
+
+          //Displaying
+          $('#nameDisplay').val(allNameVals);
+          $('#NumberDisplay').val(allNumberVals);
+          $('#seatsDisplay').val(allSeatsVals);
+      } else {
+          alert("Please select " + ($("#Numseats").val()) + " seats")
+      }
+
+        }
+
+
+        function myFunction() {
+            alert($("input:checked").length);
+        }
+
+        $(":checkbox").click(function () {
+            if ($("input:checked.empty").length == ($("#Numseats").val())) {
+                $(":checkbox").prop('disabled', true);
+                $(':checked').prop('disabled', false);
+            } else {
+                $(":checkbox").prop('disabled', false);
+            }
+        });
+
+//
+      //function totalseat(){
+      //    var adultseatnum = $("#adultseat").val();
+      //    var childseatnum = $("#childseat").val();
+      //    var Numseats = adultseatnum + childseatnum;
+      //    $("input.TotalSeat").val(Numseats);
+      //  }
+
+
+
+
+  </script>
+</body>
+
+</html>
